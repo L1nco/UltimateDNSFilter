@@ -18,7 +18,10 @@ def validar_linha(linha):
 
     if linha.startswith("<"):
         return False
-
+        
+    if linha.startswith("!"):
+        return False
+        
     if any(tag in linha.lower() for tag in ["doctype", "html", "style", "meta", "body"]):
         return False
 
